@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Portland Sacred Harp</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            background-color: #EAFAF7;
+            font-family: "Montserrat", "Avenir Next", Avenir, Lato, Candara, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Merriweather", serif;
+            font-weight: 400;
+            color: #104A3E;
+        }
+        h1 { font-size: 48px; }
+        h2 { font-size: 32px; }
+        h3 { font-size: 28px; }
+        h4 { font-size: 24px; }
+
+        a {
+            color: #4A101C;
+        }
+
+
+        main, nav, .page-title {
+
+            border: 1px solid green;
+            border-radius: 1em;
+
+            padding: 1em;
+            margin: 0 auto 1em auto;
+            width: min(85vw, 50em);
+        }
+
+        main img {
+            max-width: 100%;
+        }
+
+        @media screen and (min-width: 700px) {
+            img.float-right {
+                max-width: min(600px, 70%);
+                float: right;
+            }
+        }
+
+
+        .pic-text {
+            display: grid;
+            grid-template-columns: 1fr min(600px, 50vw); /* looks wack < 700px */
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "title title"
+                "emblem emblem";
+        }
+
+        .pic-text.pic-70 {
+            grid-template-columns: 1fr min(600px, 70vw);
+        }
+
+        @media screen and (max-width: 700px) {
+            .pic-text {
+                grid-template-areas:
+                    "title title"
+                    "emblem emblem";
+            }
+        }
+
+        .pic-text-pic {
+            min-width: 0;
+            align-self: center;
+            grid-area: emblem;
+        }
+
+        .pic-text-text {
+            align-self: center;
+            grid-area: title;
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+        }
+
+        ul li a {
+          display: block;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+
+      <nav>
+          <ul class="page-nav">
+              <li><a href="./index.html#">Home</a></li>
+              <li><a href="./index.html#about">About</a></li>
+              <li><a href="./index.html#calendar">Calendar</a></li>
+              <li><a href="./convention.html">Convention</a></li>
+          </ul>
+      </nav>
+
+      <div class="page-title pic-text">
+        <h1 class="page-title-text pic-text-text">Portland Sacred Harp</h1>
+        <img src="./images/intro-bg.jpg" class="emblem pic-text-pic" alt="Group singing in a garage at a social, with people standing behind chatting and laughing">
+      </div>
+
+
+        <h2 id="about">About</h2>
+        <p>
+        Shape note singing is one of America’s oldest musical and social gathering activities.
+        </p>
+        <p>
+        All are welcome to sing, regardless of experience or ability. Portland Sacred Harp events do not have any membership requirements or religious or political affiliations. Come as you are and sing for yourself!
+        </p>
+        <p>
+        "It was a strange sound, raw and wild and hoary, yet at the same time, familiar somehow – a great, aching lamentation that stopped people walking by in the hallway outside cold.It was as if voices from a previous century had started speaking again. <a href="https://www.oregonlive.com/music/2007/10/shapes_of_the_heart.html" target="_blank">" --The Oregonian</a>
+        </p>
+        <p>
+        "…penetrating sound that gets under your skin…that primal scream of music that is Sacred Harp singing at its best." <a href="https://www.wweek.com/portland/article-7878-portland-sacred-harp-singing.html" target=_blank> --The Willamette Week</a>
+        </p>
+        <p>
+        Watch the <a href="https://www.youtube.com/watch?v=jMe1Hs92Kv8" target="_blank">OPB feature</a>,
+        practice singing online with the <a href="https://sacredharpbremen.org/lieder/" target="_blank">Bremen Sacred Harp Robot</a>,
+        or visit <a href="https://fasola.org" target="_blank">fasola.org</a>.
+        </p>
+
+        <h2 id="calendar">Calendar</h2>
+        <div>
+        <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showTabs=1&showDate=0&showNav=0&showPrint=0&showCalendars=1&showTitle=0&showTz=0&src=aTNsaWMwYml0bmszYnNubGhkdGpsczlobTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div>
+            <h3 class="text-pretitle">Regular Singings</h3>
+            <p>
+            <strong>Third Thursdays:</strong> Shenandoah Harmony, 7-9 PM at the common room for 2515-2525 SE Ankeny.
+            <br>Look for Little Free Library box. Take the alley to your right (east side) as you’re facing the building. The common room is the first door on the left.
+            <br>
+            <em>Note:</em> This is the most likely singing to be rescheduled, check the calendar above for the most up-to-date information.
+            </p>
+            <p>
+            <strong>First and Third Sundays:</strong> First Sunday Christian Harmony, Third Sunday Blue Book, 4-6 PM at Waverly UCC, 3300 SE Woodward St, Portland
+            </p>
+            <p>
+            <strong>Second and Fourth Sundays:</strong> From the Denson book, 4-6 PM at McMenamins Kennedy School, 5736 NE 33rd Ave, Portland, OR. Singing is in the Community Room at the SE corner of the main building.
+            <h3 class ="text-pretitle">All Day Singings</h3>
+            <p>
+            We host two weekend-long singings annually. See <a href="./convention.html">here</a> for details on the next upcoming all day.
+            </p>
+            <p>
+            Our <strong>Convention</strong> is held on the third Sunday in October and Saturday before. We sing from the Denson Sacred Harp.
+            </p>
+            <p>
+            Our <strong>Double All Day</strong> is held on the first Sunday in May and Saturday before. We sing from the Denson Sacred Harp on Saturday and from the Christian Harmony on Sunday.
+            </p>
+          </div>
+
+
+
+    </main>
+</body>
