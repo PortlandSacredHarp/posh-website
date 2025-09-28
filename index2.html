@@ -108,12 +108,12 @@
 
         .intro-text-1 h1 {
           color: white;
-          font-size: 7vw;
+          font-size: calc(1rem + 5vw);
         }
 
         .intro-text-2 h2 {
           color: white;
-          font-size: 5vw;
+          font-size: calc(1rem + 2vw);
         }
 
         .page-nav {
@@ -145,8 +145,8 @@
         }
 
         .page-nav .icon {
-					display: none;
-				}
+          display: none;
+        }
 
         @media screen and (max-width: 600px) {
           .page-nav a:not(:first-child) {display: none;}
@@ -181,7 +181,7 @@
             <a href="./index.html#calendar">Calendar</a>
             <a href="./index.html#connect">Connect</a>
             <a href="./convention.html">Convention</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
           </div>
       </nav>
 
@@ -274,7 +274,7 @@
 <script>
   function responsiveMenu() {
     const topNav = document.getElementById("topNav");
-    if (x.className === "page-nav") {
+    if (topNav.className === "page-nav") {
       topNav.className += " responsive";
     } else {
       topNav.className = "page-nav";
