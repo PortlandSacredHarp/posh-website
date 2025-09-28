@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style type="text/css">
         body {
@@ -115,8 +116,7 @@
           font-size: 5vw;
         }
 
-        nav ul {
-          list-style-type: none;
+        .page-nav {
           margin: 0;
           padding: 0;
           display: flex;
@@ -124,7 +124,7 @@
           align-items: center;
         }
 
-        nav ul li a {
+        .page-nav a {
           display: block;
           padding: 14px 20px;
           text-decoration: none;
@@ -133,15 +133,41 @@
           color: #000000;
         }
 
-        nav ul li a.home {
+        .page-nav a.home {
             font-family: "Castoro", serif;
             font-size: 32px;
             font-weight: 400;
             color: #000000;
         }
 
-        nav ul li a:hover {
+        .page-nav ul li a:hover {
           color: rgb(76, 116, 118);
+        }
+
+        .page-nav .icon {
+					display: none;
+				}
+
+        @media screen and (max-width: 600px) {
+          .page-nav a:not(:first-child) {display: none;}
+          .page-nav a.icon {
+            float: right;
+            display: block;
+          }
+        }
+
+        @media screen and (max-width: 600px) {
+          .page-nav.responsive {position: relative;}
+          .page-nav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          .page-nav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+          }
         }
 
     </style>
@@ -149,13 +175,14 @@
 <body>
     <main>
       <nav>
-          <ul class="page-nav">
-            <li><a class="home" href="./index.html#">Portland Sacred Harp</a></li>
-              <li><a href="./index.html#about">About</a></li>
-              <li><a href="./index.html#calendar">Calendar</a></li>
-              <li><a href="./index.html#connect">Connect</a></li>
-              <li><a href="./convention.html">Convention</a></li>
-          </ul>
+          <div class="page-nav" id="topNav">
+            <a class="home" href="./index.html#">Portland Sacred Harp</a>
+            <a href="./index.html#about">About</a>
+            <a href="./index.html#calendar">Calendar</a>
+            <a href="./index.html#connect">Connect</a>
+            <a href="./convention.html">Convention</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+          </div>
       </nav>
 
       <section id="intro">
@@ -245,45 +272,12 @@
 </html>
 
 <script>
-  /* mobile menu
-    * ---------------------------------------------------- */
-    const ssMobileMenu = function() {
-
-        const toggleButton = document.querySelector('.s-header__menu-toggle');
-        const mainNavWrap = document.querySelector('.s-header__nav-wrap');
-        const siteBody = document.querySelector('body');
-
-        if (!(toggleButton && mainNavWrap)) return;
-
-        toggleButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            toggleButton.classList.toggle('is-clicked');
-            siteBody.classList.toggle('menu-is-open');
-        });
-
-        mainNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
-
-            link.addEventListener("click", function(e) {
-
-                // at 900px and below
-                if (window.matchMedia('(max-width: 900px)').matches) {
-                    toggleButton.classList.toggle('is-clicked');
-                    siteBody.classList.toggle('menu-is-open');
-                }
-            });
-        });
-
-        window.addEventListener('resize', function() {
-
-            // above 900px
-            if (window.matchMedia('(min-width: 901px)').matches) {
-                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open');
-                if (toggleButton.classList.contains('is-clicked')) toggleButton.classList.remove('is-clicked');
-            }
-        });
-
-    }; // end ssMobileMenu
-
-  ssMobileMenu();
-
+  function responsiveMenu() {
+    const topNav = document.getElementById("topNav");
+    if (x.className === "page-nav") {
+      topNav.className += " responsive";
+    } else {
+      topNav.className = "page-nav";
+    }
+  }
 </script>
