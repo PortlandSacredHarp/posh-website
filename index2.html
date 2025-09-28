@@ -58,12 +58,7 @@
           font-style: italic
         }
 
-        nav, .page-title, footer {
-
-            /*border: 1px solid green;
-            * border-radius: 1em;
-            */
-
+        nav, footer {
             padding: 1em;
             margin: 0 auto 1em auto;
         }
@@ -74,86 +69,50 @@
 
         main {
             /*border: 1px solid green;
-            border-radius: 1em;
-            */
+            border-radius: 1em;*/
 
             margin: 0 auto 1em auto;
-            width: min(85vw, 50em);
+            width: min(85vw, 50rem);
         }
 
-        .intro {
-          position: relative;
-          display: inline-block;
+        .intro-pic-text {
+          display: grid;
+          aspect-ratio: 4/3;
+          width: 100%;
+
+          background-image: url("./images/intro-bg.jpg");
+          background-size: min(85vw, 50rem);
+          background-repeat: no-repeat;
+          grid-auto-columns: 15% 70% 15%;
+          grid-auto-rows: 20% 20% 60%;
         }
 
-        .intro-text {
+        .intro-text-1 {
           color: white;
-          position: absolute;
-          text-align: center;
-          top: -20%;
-          left: 30%;
+          align-self: center;
+          justify-self: center;
+          grid-row: 1;
+          grid-column: 2;
+          margin-bottom: -2vw;
         }
 
-        .intro-text h1 {
+        .intro-text-2 {
           color: white;
-          font-size: 100px;
-          margin-bottom: 10px;
+          justify-self: center;
+          align-self: center;
+          grid-row: 2;
+          grid-column: 2;
+          margin-top: -5vw;
         }
 
-        .intro-text h2 {
+        .intro-text-1 h1 {
           color: white;
-          font-size: 48px;
-          margin-top: 10px;
+          font-size: 7vw;
         }
 
-        .intro img {
-          display: block;
-        }
-
-        .page-title-text {
-          color: #FFFFFF;
-          text-align: center;
-          z-index: 2
-        }
-
-        main img {
-            max-width: 100%;
-        }
-
-        @media screen and (min-width: 700px) {
-            img.float-right {
-                max-width: min(600px, 70%);
-                float: right;
-            }
-        }
-
-        .pic-text {
-            display: flex;
-            grid-template-columns: 1fr min(600px, 50vw);
-            grid-template-rows: auto auto;
-            grid-template-areas:
-                "title title"
-                "emblem emblem";
-
-        }
-
-        @media screen and (max-width: 700px) {
-            .pic-text {
-                grid-template-areas:
-                    "title title"
-                    "emblem emblem";
-            }
-        }
-
-        .pic-text-pic {
-            min-width: 0;
-            align-self: center;
-            grid-area: emblem;
-        }
-
-        .pic-text-text {
-            align-self: center;
-            grid-area: title;
+        .intro-text-2 h2 {
+          color: white;
+          font-size: 5vw;
         }
 
         nav ul {
@@ -199,18 +158,12 @@
           </ul>
       </nav>
 
-<!--      <div class="page-title pic-text">
-        <h1 class="page-title-text pic-text-text">Sing</h1>
-        <h2 class="page-title-text pic-text-text">Community + Joy</h2>
-        <img src="./images/intro-bg.jpg" class="emblem pic-text-pic" alt="Group singing in a garage at a social, with people standing behind chatting and laughing">
-      </div>
-      -->
-
-      <section id="intro" class="intro">
-      <div class="intro">
-        <img src="./images/intro-bg.jpg" alt="Group singing in a garage at a social, with people standing behind chatting and laughing">
-        <div class="intro-text">
+      <section id="intro">
+      <div class="intro-pic-text">
+        <div class="intro-text-1">
           <h1>Sing</h1>
+        </div>
+        <div class="intro-text-2">
           <h2>Community <span>+</span> Joy </h2>
         </div>
       </div>
