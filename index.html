@@ -117,15 +117,17 @@
         }
 
         .page-nav {
-          margin: 0;
+          overflow: hidden;
+          display: block;
+          /*margin: 0;
           padding: 0;
           display: flex;
           justify-content: left;
-          align-items: center;
+          align-items: center;*/
         }
 
         .page-nav a {
-          display: block;
+          float: left;
           padding: 14px 20px;
           text-decoration: none;
           font-size: 20px;
@@ -134,13 +136,15 @@
         }
 
         .page-nav a.home {
+            display: flex;
             font-family: "Castoro", serif;
             font-size: 32px;
             font-weight: 400;
             color: #000000;
+            float: left;
         }
 
-        .page-nav ul li a:hover {
+        .page-nav a:hover {
           color: rgb(76, 116, 118);
         }
 
