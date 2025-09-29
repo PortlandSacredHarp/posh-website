@@ -117,17 +117,19 @@
         }
 
         .page-nav {
-          overflow: hidden;
-          display: block;
-          /*margin: 0;
-          padding: 0;
-          display: flex;
-          justify-content: left;
-          align-items: center;*/
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-rows: auto auto;
+          grid-template-areas: "homelink rightside"
+                               "secondary secondary";
+        }
+        
+        .page-nav .secondary-nav {
+          align-self: center;
+          grid-area: rightside;
         }
 
         .page-nav a {
-          float: left;
           padding: 14px 20px;
           text-decoration: none;
           font-size: 20px;
@@ -136,7 +138,7 @@
         }
 
         .page-nav a.home {
-            display: flex;
+            grid-area: homelink;
             font-family: "Castoro", serif;
             font-size: 32px;
             font-weight: 400;
@@ -148,29 +150,29 @@
           color: rgb(76, 116, 118);
         }
 
-        .page-nav .icon {
+        .page-nav .burgerbutton {
           display: none;
         }
 
         @media screen and (max-width: 600px) {
-          .page-nav a:not(:first-child) {display: none;}
-          .page-nav a.icon {
-            float: right;
-            display: block;
+          .page-nav {
+            grid-template-columns: 1fr auto;
           }
-        }
+          .page-nav a.burgerbutton {
+            display: block;
+            grid-area: rightside;
+            justify-self: right;
+            align-self: center;
+          }
+          .secondary-nav {display: none;}
 
-        @media screen and (max-width: 600px) {
-          .page-nav.responsive {position: relative;}
-          .page-nav.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-          }
-          .page-nav.responsive a {
-            float: none;
+          .page-nav.responsive .secondary-nav {
             display: block;
-            text-align: left;
+            grid-area: secondary;
+          }
+          
+          .secondary-nav a {
+            display: block;
           }
         }
 
@@ -181,11 +183,13 @@
       <nav>
           <div class="page-nav" id="topNav">
             <a class="home" href="./index.html#">Portland Sacred Harp</a>
-            <a href="./index.html#about">About</a>
-            <a href="./index.html#calendar">Calendar</a>
-            <a href="./index.html#connect">Connect</a>
-            <a href="./convention.html">Convention</a>
-            <a href="javascript:void(0);" class="icon" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>
+            <div class="secondary-nav">
+                <a href="./index.html#about">About</a>
+                <a href="./index.html#calendar">Calendar</a>
+                <a href="./index.html#connect">Connect</a>
+                <a href="./convention.html">Convention</a>
+            </div>
+            <a href="javascript:void(0);" class="icon burgerbutton" onclick="responsiveMenu()"><i class="fa fa-bars"></i></a>                
           </div>
       </nav>
 
