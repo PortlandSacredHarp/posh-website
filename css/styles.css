@@ -25,6 +25,10 @@ h2 { font-size: 32px; }
 h3 { font-size: 28px; }
 h4 { font-size: 24px; }
 
+#all-day-name {
+  margin-top: 0;
+}
+
 a {
     color: rgb(76, 116, 118);
     text-decoration: none;
