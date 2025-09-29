@@ -1,0 +1,161 @@
+body {
+    background-color: #CFE6E8;
+    font-family: "Inter", sans-serif;
+    font-size: 19px;
+    text-rendering: optimizeLegibility;
+}
+
+.calendar {
+    background-color: white;
+}
+
+p {
+    font-weight: 300;
+    line-height: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Castoro", serif;
+    font-weight: 400;
+    color: rgb(76, 116, 118);
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+
+a {
+    color: rgb(76, 116, 118);
+    text-decoration: none;
+}
+
+.attention-getter {
+  font-weight: 400;
+  line-height: 50px
+  font-size: 24px;
+}
+
+.quote {
+  line-height: 50px
+  font-size: 24px;
+  font-style: italic
+}
+
+nav, footer {
+    padding: 1em;
+    margin: 0 auto 1em auto;
+}
+
+section {
+    padding: 1em;
+}
+
+main {
+    /*border: 1px solid green;
+    border-radius: 1em;*/
+
+    margin: 0 auto 1em auto;
+    width: min(85vw, 50rem);
+}
+
+.intro-pic-text {
+  display: grid;
+  aspect-ratio: 4/3;
+  width: 100%;
+
+  background-image: url("../images/intro-bg.jpg");
+  background-size: min(85vw, 50rem);
+  background-repeat: no-repeat;
+  grid-auto-columns: 15% 70% 15%;
+  grid-auto-rows: 20% 20% 60%;
+}
+
+.intro-text-1 {
+  color: white;
+  align-self: center;
+  justify-self: center;
+  grid-row: 1;
+  grid-column: 2;
+  margin-bottom: -2vw;
+}
+
+.intro-text-2 {
+  color: white;
+  justify-self: center;
+  align-self: center;
+  grid-row: 2;
+  grid-column: 2;
+  margin-top: -5vw;
+}
+
+.intro-text-1 h1 {
+  color: white;
+  font-size: calc(1rem + 5vw);
+}
+
+.intro-text-2 h2 {
+  color: white;
+  font-size: calc(1rem + 2vw);
+}
+
+.page-nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "homelink rightside"
+                       "secondary secondary";
+}
+
+.page-nav .secondary-nav {
+  align-self: center;
+  grid-area: rightside;
+}
+
+.page-nav a {
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.page-nav a.home {
+    grid-area: homelink;
+    font-family: "Castoro", serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    float: left;
+}
+
+.page-nav a:hover {
+  color: rgb(76, 116, 118);
+}
+
+.page-nav .burgerbutton {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .page-nav {
+    grid-template-columns: 1fr auto;
+  }
+  .page-nav a.burgerbutton {
+    display: block;
+    grid-area: rightside;
+    justify-self: right;
+    align-self: center;
+  }
+  .secondary-nav {display: none;}
+
+  .page-nav.responsive .secondary-nav {
+    display: block;
+    grid-area: secondary;
+  }
+
+  .secondary-nav a {
+    display: block;
+  }
+}
+
