@@ -97,3 +97,14 @@
     </section>
     </main>
   </body>
+
+<script>
+  function responsiveMenu() {
+    const topNav = document.getElementById("topNav");
+    if (topNav.className === "page-nav") {
+      topNav.className += " responsive";
+    } else {
+      topNav.className = "page-nav";
+    }
+  }
+</script>
